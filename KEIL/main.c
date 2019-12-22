@@ -35,7 +35,7 @@ int main()
 	uint16_t x, y;
 	uint8_t dx, dy;
 	SYSInit();
-  LCD->LCD_RST = 0;
+  	LCD->LCD_RST = 0;
 	delay(5000000);
 	LCD->LCD_RST = 1;
 	x = 110;
