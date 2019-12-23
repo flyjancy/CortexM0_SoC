@@ -41,15 +41,13 @@ int main()
 	x = 110;
 	y = 150;
 	dx = dy = 20;
-	LCD_Init(0);
-	// CAMERA_Initial();
-	// photo();
-	// for (x = 0; x < 240; x++) {
-	// 	for (y = 0; y < 320; y++) {
-	// 		POINT_COLOR = CAMERA->CAMERA_VALUE[x][y];
-	// 		// POINT_COLOR = RED;
-	// 		LCD_DrawPoint(y, x);
-	// 	}
-	// }
-	game_mode(x, y, dx, dy);
+	LCD_Init(1);
+	CAMERA_Initial();
+	photo();
+	 for (x = 0; x < 240; x++) {
+	 	for (y = 0; y < 320; y++) {
+	 		LCD_Fast_DrawPoint(y, x, CAMERA->CAMERA_VALUE[x][y]);
+	 	}
+	 }
+	//game_mode(x, y, dx, dy);
 }

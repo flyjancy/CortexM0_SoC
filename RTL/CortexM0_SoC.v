@@ -50,12 +50,12 @@ wire [31:0] IRQ;
 wire interrupt_UART;
 wire    [3:0]   key_interrupt;
 /*Connect the IRQ with UART*/
-// assign IRQ = {27'b0, interrupt_UART, key_interrupt[3:0]};
+assign IRQ = {27'b0, key_interrupt[3:0], interrupt_UART};
 
-assign IRQ = {31'b0, interrupt_UART};
+// assign IRQ = {31'b0, interrupt_UART};
 /***************************/
 
-assign  row = 4'b0001;
+assign  row = 4'b1110;
 Keyboard Keyboard_IRQ(
         .HCLK                           (clk),
         .HRESETn                        (RSTn),

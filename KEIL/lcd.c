@@ -46,10 +46,10 @@ uint16_t ReadData() {
 void LCD_WR_REG( uint16_t data ) {
   	LCD_RS_CLR; 
  	LCD_CS_CLR; 
-	delay(500);
+	delay(1);
 	MakeData( data );
 	LCD_WR_CLR;
-	delay(500);
+	delay(1);
 	LCD_WR_SET; 
  	LCD_CS_SET;         
 }
@@ -58,10 +58,10 @@ void LCD_WR_REG( uint16_t data ) {
 void LCD_WR_DATA( uint16_t data ) {
   	LCD_RS_SET;
 	LCD_CS_CLR;
-	delay(500);
+	delay(1);
 	MakeData( data );
 	LCD_WR_CLR;
-	delay(500);
+	delay(1);
 	LCD_WR_SET;
 	LCD_CS_SET;
 }
@@ -74,7 +74,7 @@ uint16_t LCD_RD_DATA(void)
 	LCD_CS_CLR;
 	LCD_RD_CLR;			   
 	t=ReadData();
-	delay(500);  
+	delay(1);  
 	LCD_RD_SET;
 	LCD_CS_SET; 
 
@@ -92,7 +92,7 @@ void LCD_WriteReg( uint16_t LCD_Reg, uint16_t LCD_RegValue ) {
 uint16_t LCD_ReadReg(uint16_t LCD_Reg)
 {										   
  	LCD_WR_REG(LCD_Reg);   
-	delay(500);
+	delay(50);
 	return LCD_RD_DATA(); 
 }
 
@@ -431,7 +431,7 @@ void LCD_Init(uint8_t dir)
 	}
 	LCD_Display_Dir(dir);		 	// horizon or vertical
 	LCD -> LCD_BL_CTR = 1;					// Back Light
-	LCD_Clear(WHITE);
+	//LCD_Clear(WHITE);
 }  		  
 
 void LCD_Clear(uint16_t color)
