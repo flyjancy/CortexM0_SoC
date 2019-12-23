@@ -6,6 +6,6 @@ You should download cortex m0 eval edition from arm and add file "cortexm0ds_log
 
 There are some references in folder /docs/
 
-We have written a tutorial for cortex m0 based soc building but now it is not open source.
+We have written a tutorial for cortex m0 based soc building but now it is unpublished.
 
 All developed by Tianjin Zhao(tianjin95@hotmail.com) and Fengrui Liu(fengrui98@hotmail.com).
