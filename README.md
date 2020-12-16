@@ -1,6 +1,8 @@
 # Cortex M0 based SoC
 
-This SoC can catch photo and display it on LCD screen.
+This SoC can catch photo and display it on LCD screen. 
+
+For step-by-step version please go to https://github.com/pastglory/CortexM0_SoC_Task
 
 You should download cortex m0 eval edition from arm and add file "cortexm0ds_logic.v" to folder /RTL/
 
